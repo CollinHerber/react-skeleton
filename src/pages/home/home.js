@@ -3,8 +3,11 @@ import {HashRouter} from "react-router-dom";
 import logo from "../../logo.svg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome/index";
 import {faCoffee} from "@fortawesome/free-solid-svg-icons/index";
+import ContactForm from "../../resources/components/contact-form";
+
 
 class Home extends Component {
+
     render() {
         return (
             <HashRouter>
@@ -18,14 +21,7 @@ class Home extends Component {
                             </p>
                         </div>
                     </div>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
+                    <ContactForm></ContactForm>
                 </div>
             </HashRouter>
         )
