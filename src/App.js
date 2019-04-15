@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Home from './pages/home/home'
-import AnotherPage from "./pages/another-page/another-page";
+import RandomUser from "./pages/random-user/random-user";
 import './App.scss';
 import {Route, NavLink, HashRouter} from "react-router-dom";
 
 class App extends Component {
+
     render() {
         return (
             <HashRouter>
@@ -33,7 +34,7 @@ class App extends Component {
                 </div>
                 <div className="container">
                     <Route exact path="/" component={Home}/>
-                    <Route path="/another-page" component={AnotherPage}/>
+                    <Route path="/another-page" component={RandomUser}/>
                 </div>
             </HashRouter>
         );
