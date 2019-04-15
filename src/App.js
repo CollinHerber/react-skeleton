@@ -28,8 +28,10 @@ class App extends Component {
                         </ul>
                     </div>
                 </nav>
-                <h1>Some Shnazzy Site</h1>
-                <div className="content">
+                <div className="text-center">
+                    <h1>Some Shnazzy Site</h1>
+                </div>
+                <div className="container">
                     <Route exact path="/" component={Home}/>
                     <Route path="/another-page" component={AnotherPage}/>
                 </div>
