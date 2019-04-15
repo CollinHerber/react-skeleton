@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {HashRouter} from "react-router-dom";
+import {faSpinner} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class RandomUser extends Component {
     constructor(props) {
@@ -15,17 +17,20 @@ class RandomUser extends Component {
         });
     }
 
+    renderNameElement(user) {
+        if (user && user.name) {
+            return ('I fetched a random user: ' + user.name.first + ' ' + user.name.last)
+        } else {
+            return (<FontAwesomeIcon style={{fontSize: 48}} icon={faSpinner} spin/>)
+        }
+    }
+
     render() {
         const user = this.state.user;
-        let name;
-
-        if (user && user.name) {
-            name = 'I fetched a random user: ' + user.name.first + ' ' + user.name.last
-        }
         return (
             <HashRouter>
                 <div className="text-capitalize">
-                    {name}
+                    {this.renderNameElement(user)}
                 </div>
             </HashRouter>
         )
