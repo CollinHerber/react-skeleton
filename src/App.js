@@ -9,9 +9,9 @@ class App extends Component {
         return (
             <HashRouter>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href="#">
+                    <div className="navbar-brand">
                         <NavLink to="/">My Shnazzy Site</NavLink>
-                    </a>
+                    </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -21,9 +21,9 @@ class App extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <div className="nav-link">
                                     <NavLink to="/another-page">Another Page</NavLink>
-                                </a>
+                                </div>
                             </li>
                         </ul>
                     </div>
